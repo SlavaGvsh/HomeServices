@@ -1,0 +1,39 @@
+*,
+::after,
+::before {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+html {
+   font-size: calc(10px / 16px * 100%);
+   // @include respond(tab-land) {
+   //    font-size: calc(9px / 16px * 100%);
+   // }
+   // @include respond(tab-port) {
+   //    font-size: calc(7px / 16px * 100%);
+   // }
+   // @include respond(phone) {
+   //    font-size: calc(5px / 16px * 100%);
+   // }
+   // @include respond(big-screen) {
+   //    font-size: calc(14px / 16px * 100%);
+   // }
+}
+body {
+   font-family: "Roboto", sans-serif;
+   font-weight: 400;
+   font-style: normal;
+   color: $color-gray;
+   // font-size: 16px;
+   font-size: $font-size-paragraph;
+   letter-spacing: 0.2rem;
+   padding: 5rem;
+   background: $color-white;
+}
+body.checked {
+   overflow: hidden;
+}
+.container {
+   
+}
