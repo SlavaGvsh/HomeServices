@@ -1,39 +1,46 @@
-*,
-::after,
-::before {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-}
 html {
    font-size: calc(10px / 16px * 100%);
-   // @include respond(tab-land) {
-   //    font-size: calc(9px / 16px * 100%);
-   // }
-   // @include respond(tab-port) {
-   //    font-size: calc(7px / 16px * 100%);
-   // }
-   // @include respond(phone) {
-   //    font-size: calc(5px / 16px * 100%);
-   // }
-   // @include respond(big-screen) {
-   //    font-size: calc(14px / 16px * 100%);
-   // }
+   @include respond(tab-land) {
+      font-size: calc(9px / 16px * 100%);
+   }
+   @include respond(tab-port) {
+      font-size: calc(8px / 16px * 100%);
+   }
+   @include respond(phone) {
+      font-size: calc(7px / 16px * 100%);
+   }
+   @include respond(big-screen) {
+      font-size: calc(14px / 16px * 100%);
+   }
 }
 body {
-   font-family: "Roboto", sans-serif;
+   font-family: "Plus Jakarta Sans", sans-serif;
    font-weight: 400;
    font-style: normal;
-   color: $color-gray;
-   // font-size: 16px;
+   color: $color-paragraph;
    font-size: $font-size-paragraph;
-   letter-spacing: 0.2rem;
-   padding: 5rem;
+   line-height: 2.8rem;
    background: $color-white;
+}
+[class*="__container"] {
+   max-width: 147rem;
+   margin: 0 auto;
+   padding: 0px 1.5rem;
+}
+.header__container {
+   max-width: 161.4rem;
+}
+[class*="__container-intro"] {
+   max-width: 191.4rem;
+}
+.wrapper {
+   display: flex;
+   flex-direction: column;
+   min-height: 100%;
+}
+.main {
+   flex: 1 1 auto;
 }
 body.checked {
    overflow: hidden;
-}
-.container {
-   
 }

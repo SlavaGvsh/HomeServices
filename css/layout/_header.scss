@@ -1,3 +1,106 @@
 .header {
-   
+   background: $bg-color-DarcBlue;
+   &__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem 1.5rem;
+      position: relative;
+      @include respond(tab-port){
+         &.active::before{
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #0A1335;
+            opacity: 0.5;
+      }
+      
+      }
+     
+   }
+   &__burger {
+      display: none;
+      @include respond(tab-port) {
+         display: block;
+      }
+   }
+   &__body {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex: 0 1 70%;
+      @include respond(tab-port) {
+         display: none;
+         flex-direction: column;
+         position: absolute;
+         top: 0;
+         height: 100vh;
+         right: 0%;
+         left: 30%;
+         bottom: 0;
+         z-index: 20;
+         background: $bg-color-DarcBlue;
+      }
+   }
+
+   &__body.active {
+      display: flex;
+      
+   }
+}
+
+.img-logo {
+   margin-right: 1rem;
+   flex: 0 1 auto;
+
+   &:hover {
+      opacity: 0.7;
+      transform: scale(1.1);
+   }
+}
+.mobile-header {
+   display: none;
+   // @include respond(tab-port) {
+   //    display: block;
+   // }
+}
+.mobile-header.active {
+   @include respond(tab-port) {
+      display: flex;
+      align-items: center;
+      gap: 5.2rem;
+      padding: 2rem;
+   }
+}
+.services {
+   a {
+      color: $color-white;
+      font-size: $font-size-paragraph;
+      padding: 1rem 0;
+      display: inline-block;
+      text-align: center;
+      font-weight: 700;
+      &:hover,
+      &:active {
+         opacity: 0.7;
+         transform: scale(1.1);
+      }
+      &::before {
+         content: "";
+         width: 1.2rem;
+         height: 1.2rem;
+         margin-right: 0.6rem;
+         display: inline-block;
+         background: #ff5e5e;
+         border-radius: 50%;
+         top: 0;
+         left: 0;
+      }
+      @include respond(tab-port) {
+         padding-bottom: 2.8rem;
+      }
+   }
 }
